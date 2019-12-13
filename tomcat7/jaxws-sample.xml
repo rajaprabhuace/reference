@@ -1,0 +1,12 @@
+<!-- Tomcat 7 Configuration -->
+<Context
+	docBase="F:\workspace\samples\samples\web-services-samples\jaxws-sample\src\main\webapp"
+	reloadable="true">
+	<Resources
+		className="org.apache.naming.resources.VirtualDirContext"
+		extraResourcePaths="/WEB-INF/classes=F:\workspace\samples\samples\web-services-samples\jaxws-sample\target\classes" />
+	<Loader
+		className="org.apache.catalina.loader.VirtualWebappLoader"
+		virtualClasspath="F:\workspace\samples\samples\web-services-samples\jaxws-sample\target\jaxws-sample-1.0\WEB-INF\lib\*.jar;F:\workspace\samples\samples\web-services-samples\jaxws-sample\target\classes" />
+	<JarScanner scanAllDirectories="true" />
+</Context>

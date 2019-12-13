@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<localRepository>F:\_maven-repo</localRepository>
+
+	<offline>false</offline>
+
+	<profiles>
+		<profile>
+			<id>profile1</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>repo1-maven-repository</id>
+					<name>repo1-maven-repository</name>
+					<url>http://repo1.maven.org/maven2/</url>
+					<layout>default</layout>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>repo1-maven-repository</id>
+					<name>repo1-maven-repository</name>
+					<url>http://repo1.maven.org/maven2/</url>
+					<layout>default</layout>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+		<profile>
+			<id>profile2</id>
+			<repositories>
+				<repository>
+					<id>oss-sonatype-repository</id>
+					<name>oss.sonatype-repository</name>
+					<url>https://oss.sonatype.org/content/repositories/releases/</url>
+					<layout>default</layout>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>oss-sonatype-repository</id>
+					<name>oss.sonatype-repository</name>
+					<url>https://oss.sonatype.org/content/repositories/releases/</url>
+					<layout>default</layout>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+		<profile>
+			<id>profile3</id>
+			<repositories>
+				<repository>
+					<id>JBoss repository</id>
+					<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>JBoss repository</id>
+					<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+
+	</profiles>
+
+</settings>

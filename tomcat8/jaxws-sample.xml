@@ -1,0 +1,15 @@
+<!-- Tomcat 8 Configuration -->
+<Context
+	docBase="F:\workspace\samples\samples\web-services-samples\jaxws-sample\src\main\webapp"
+	reloadable="true">
+	<Resources className="org.apache.catalina.webresources.StandardRoot">
+		<PreResources
+			className="org.apache.catalina.webresources.DirResourceSet"
+			base="F:\workspace\samples\samples\web-services-samples\jaxws-sample\target\jaxws-sample-1.0\WEB-INF\lib"
+			webAppMount="/WEB-INF/lib" />
+		<PostResources
+			className="org.apache.catalina.webresources.DirResourceSet"
+			base="F:\workspace\samples\samples\web-services-samples\jaxws-sample\target\classes"
+			webAppMount="/WEB-INF/classes" />
+	</Resources>
+</Context>
