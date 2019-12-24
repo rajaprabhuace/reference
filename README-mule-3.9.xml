@@ -27,14 +27,29 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 <!-- 
 
 	filter(Array<T>, (item: T, index: Number) -> Boolean): Array<T>
-	payload filter ((value, index) -> (value.id == "A1"))
+	payload filter ((item, index) -> (item.id == "A1"))
 	
 	map(Array<T>, (item: T, index: Number) -> R): Array<R>
-	payload map (value, index) -> {(index) : value}
+	payload map (item, index) -> {(index) : item}
 	
 	mapObject({ (K)?: V }, (value: V, key: K, index: Number) -> Object): Object
 	payload mapObject (value, key, index) -> {(index) : {(value):key}}
+	
+	reduce(Array<T>, (item: T, accumulator: T) -> T): T | Null
+	["a", "b", "c", "d"] reduce ((item, acc = "z") -> acc ++ item)
+	[0, 1, 2, 3, 4, 5] reduce ((item, acc = 3) -> acc + item)
+	
+	Concat - (':array')/(':string')/(':object') ⇒ ':number'
+	sizeOf [1,2,3]
+	sizeOf "MuleSoft"
+	sizeOf {a:1,b:2}
 
+	Flatten - (':array') ⇒ ':array'
+	flatten payload
+	
+	Upper - (':string') ⇒ ':string'
+	upper "mulesoft"
+	
  -->
 
 </mule>
