@@ -35,6 +35,15 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 			<dw:set-payload resource="classpath:dwl/sample.dwl" />
 			<dw:set-variable resource="classpath:dwl/sample-var.dwl" />
 		</dw:transform-message>
+		
+		<!-- input-payload, dw:input-variable, set-payload and set-variable -->
+		<dw:transform-message doc:name="Transform Message">
+			<dw:input-payload doc:sample="samples\sample.xml" mimeType="application/xml" />
+			<dw:input-variable variableName="sampleVar" doc:sample="samples\sample-var.xml"
+				mimeType="application/xml" />
+			<dw:set-payload resource="classpath:dwl/sample.dwl" />
+			<dw:set-variable resource="classpath:dwl/sample-var.dwl" />
+		</dw:transform-message>
 
 	</flow>
 
