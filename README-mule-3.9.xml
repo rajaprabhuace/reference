@@ -26,6 +26,12 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 	
 <!-- 
 
+	%var inUname = inboundProperties['userName']
+	%var outUname = outboundProperties['userName']
+	%var uname = flowVars['userName']
+	
+	============================================================================
+
 	filter(Array<T>, (item: T, index: Number) -> Boolean): Array<T>
 	payload filter ((item, index) -> (item.id == "A1"))
 	
