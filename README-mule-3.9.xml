@@ -23,5 +23,18 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 		</dw:transform-message>
 
 	</flow>
+	
+<!-- 
+
+	filter(Array<T>, (item: T, index: Number) -> Boolean): Array<T>
+	payload filter ((value, index) -> (value.id == "A1"))
+	
+	map(Array<T>, (item: T, index: Number) -> R): Array<R>
+	payload map (value, index) -> {(index) : value}
+	
+	mapObject({ (K)?: V }, (value: V, key: K, index: Number) -> Object): Object
+	payload mapObject (value, key, index) -> {(index) : {(value):key}}
+
+ -->
 
 </mule>
