@@ -32,12 +32,15 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 	
 	============================================================================
 
+	Using Filter on an Array
 	filter(Array<T>, (item: T, index: Number) -> Boolean): Array<T>
 	payload filter ((item, index) -> (item.id == "A1"))
 	
+	Using Map to Return an Array
 	map(Array<T>, (item: T, index: Number) -> R): Array<R>
 	payload map (item, index) -> {(index) : item}
 	
+	Map Object
 	mapObject({ (K)?: V }, (value: V, key: K, index: Number) -> Object): Object
 	payload mapObject (value, key, index) -> {(index) : {(value):key}}
 	
@@ -55,8 +58,7 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 	
 	Upper - (':string') ⇒ ':string'
 	upper "mulesoft"
-	
-	
+		
 	Pluck Keys
 	payload pluck $$
 
@@ -71,6 +73,13 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 
 	Order By
 	[{ letter: "d" }, { letter: "e" }, { letter: "c" }, { letter: "a" }, { letter: "b" }] orderBy $.letter
+
+	Array Push
+	[0, 1, 2] + 5
+	
+	Matches
+	(':string', ':regex') ⇒ ':boolean'
+	"admin123" matches /(\d+)/
 	
  -->
 
