@@ -56,6 +56,22 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 	Upper - (':string') ⇒ ':string'
 	upper "mulesoft"
 	
+	
+	Pluck Keys
+	payload pluck $$
+
+	Pluck Values
+	payload pluck $
+
+	Join By
+	["a","b","c"] joinBy "-"
+
+	Split By
+	"a-b-c" splitBy "-"
+
+	Order By
+	[{ letter: "d" }, { letter: "e" }, { letter: "c" }, { letter: "a" }, { letter: "b" }] orderBy $.letter
+	
  -->
 
 </mule>
