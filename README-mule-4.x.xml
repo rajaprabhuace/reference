@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="transform-messages-code-snippet" doc:id="4ed4dfee-9895-4458-884b-0a7c6bce1d6b">
+		<ee:transform doc:name="Transform Message" doc:id="b24bf84e-7fc5-4930-9383-2adfe64ff866">
+			<ee:message>
+				<ee:set-payload resource="classpath:dwl/sample.dwl" />
+				<ee:set-attributes resource="classpath:dwl/sampleAttributes.dwl" />
+			</ee:message>
+			<ee:variables>
+				<ee:set-variable resource="classpath:dwl/sample-var.dwl" variableName="sampleVar" />
+			</ee:variables>
+		</ee:transform>
+	</flow>
+	
+<!-- 
+	============================================================================
+	
+	output application/json indent=false, skipNullOn="everywhere" encoding="UTF-8"
+	output application/xml writeDeclaration=true, indent=false, skipNullOn="everywhere" encoding="UTF-8"
+		
+	============================================================================
+
+	Using Filter on an Array
+	filter(Array<T>, (item: T, index: Number) -> Boolean): Array<T>
+	payload filter ((item, index) -> (item.id == "A1"))
+	
+	Using Map to Return an Array
+	map(Array<T>, (item: T, index: Number) -> R): Array<R>
+	payload map (item, index) -> {(index) : item}
+	
+	Map Object
+	mapObject({ (K)?: V }, (value: V, key: K, index: Number) -> Object): Object
+	payload mapObject (value, key, index) -> {(index) : {(value):key}}
+	
+	Reduction expression to the elements in an array.
+	reduce(Array<T>, (item: T, accumulator: T) -> T): T | Null
+	["a", "b", "c", "d"] reduce ((item, acc = "z") -> acc ++ item)
+	[0, 1, 2, 3, 4, 5] reduce ((item, acc = 3) -> acc + item)
+	
+ -->
+ 
+</mule>
