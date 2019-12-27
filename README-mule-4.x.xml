@@ -21,8 +21,15 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	
 	output application/json indent=false, skipNullOn="everywhere" encoding="UTF-8"
 	output application/xml writeDeclaration=true, indent=false, skipNullOn="everywhere" encoding="UTF-8"
-		
+	read("<prices><price>9.99</price><price>10.99</price></prices>","application/xml")
+	
 	============================================================================
+	
+	Declare using function directive
+	%function toUser(user) {firstName: user.givenName, lastName: user.sn}
+	
+	Assign to a var
+	%var toUser = (user) -> {firstName: user.givenName, lastName: user.sn}
 
 	Using Filter on an Array
 	filter(Array<T>, (item: T, index: Number) -> Boolean): Array<T>
@@ -40,6 +47,82 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	reduce(Array<T>, (item: T, accumulator: T) -> T): T | Null
 	["a", "b", "c", "d"] reduce ((item, acc = "z") -> acc ++ item)
 	[0, 1, 2, 3, 4, 5] reduce ((item, acc = 3) -> acc + item)
+	
+	pluck({ (K)?: V }, (value: V, key: K, index: Number) -> R): Array<R>
+	{"a":"b","c":"d"} pluck (value,key,index) -> { (index) : { (value):key} }
+	
+	sizeOf(Array<Any>): Number
+	sizeOf([ "a", "b", "c"])
+	sizeOf({a: 1, b: 2})
+	sizeOf("abc")
+	
+	splitBy(String, Regex): Array<String>
+	"192.88.99.0/24" splitBy(/[.\/]/)
+	"hello world" splitBy(/\s/)
+	
+	splitBy(String, String): Array<String>
+	"192.88.99.0" splitBy(".")
+	
+	trim(String): String
+	trim("    abc    ")
+	trim(null)
+	
+	uuid(): String
+	uuid()
+	
+	contains(Array<T>, Any): Boolean
+	[ 1, 2, 3, 4 ] contains(2)
+	ContainsRequestedItem: payload.root.*order.*items contains "3"
+	
+	contains(String, String): Boolean
+	"mulesoft" contains("mule")
+	
+	contains(String, Regex): Boolean
+	contains("mulesoft", /[e-g]/)
+	
+	groupBy(Array<T>, (item: T, index: Number) -> R): { (R): Array<T> }
+	["a","b","c"] groupBy (item, index) -> index
+	[
+	   { "name": "Foo", "language": "Java" },
+	   { "name": "Bar", "language": "Scala" },
+	   { "name": "FooBar", "language": "Java" }
+	] groupBy (item) -> item.language
+	[
+        {"id": "internal"},
+        {"id": "left", "label": "Move Left"},
+        {"id": "right", "label": "Move Right"},
+        {"id": "up", "label": "Move Up"},
+        {"id": "down", "label": "Move Down"}
+    ] groupBy "myLabels"
+	{ "a" : "b", "c" : "d"} groupBy (value) -> upper(value)
+	read("<prices><price>9.99</price><price>10.99</price></prices>","application/xml") groupBy "costs"
+	isBlank(String | Null): Boolean
+	isBlank(" 1234")
+	
+	isEmpty(Array<Any>): Boolean
+	[ isEmpty([]), isEmpty([1]) ]
+	
+	isEmpty(String): Boolean
+	[ isEmpty(""), isEmpty("DataWeave") ]
+	
+	isEmpty(Null): Boolean
+	isEmpty(null)
+	
+	isEmpty(Object): Boolean
+	[ isEmpty({}), isEmpty({name: "DataWeave"}) ]
+	
+	joinBy(Array<Any>, String): String
+	["a","b","c"] joinBy "-"
+	
+	flatten(Array<Array<T> | Q>): Array<T | Q>
+	flatten([ [0.0, 0], [1,1], [2,3], [5,8] ])
+	
+	upper(String): String
+	upper("mulesoft")
+	
+	write(Any, String, Object): String | Binary
+	write("world", "text/plain")
+	write(payload, "application/csv", {"header":true, "separator" : "|"}
 	
  -->
 </mule>
