@@ -5,10 +5,10 @@
 	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<flow name="transform-messages-code-snippet" doc:id="4ed4dfee-9895-4458-884b-0a7c6bce1d6b">
-		<ee:transform doc:name="Transform Message" doc:id="b24bf84e-7fc5-4930-9383-2adfe64ff866">
+		<ee:transform doc:name="Transform Message" doc:id="285c19e9-9b72-4577-b38d-d0976c605a34">
 			<ee:message>
 				<ee:set-payload resource="classpath:dwl/sample.dwl" />
-				<ee:set-attributes resource="classpath:dwl/sampleAttributes.dwl" />
+				<ee:set-attributes resource="classpath:dwl/sample-attributes.dwl" />
 			</ee:message>
 			<ee:variables>
 				<ee:set-variable resource="classpath:dwl/sample-var.dwl" variableName="sampleVar" />
@@ -42,5 +42,4 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	[0, 1, 2, 3, 4, 5] reduce ((item, acc = 3) -> acc + item)
 	
  -->
- 
 </mule>
