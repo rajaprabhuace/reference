@@ -124,5 +124,12 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	write("world", "text/plain")
 	write(payload, "application/csv", {"header":true, "separator" : "|"}
 	
+	read(String | Binary, String, Object): Any
+	read('{ "hello" : "world" }','application/json')
+	read("<prices><basic>9.99</basic></prices>", "application/xml", { indexedReader: "false" })."prices"
+	
+	readUrl(String, String, Object): Any
+	readUrl("classpath://myJsonSnippet.json", "application/json")
+	
  -->
 </mule>

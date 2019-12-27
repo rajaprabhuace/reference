@@ -85,6 +85,11 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 	(':string', ':regex') ⇒ ':boolean'
 	"admin123" matches /(\d+)/
 	
+	read(String | Binary, String, Object): Any
+	read('{ "hello" : "world" }','application/json')
+	
+	readUrl("classpath://countries.csv", "application/csv")
+	
  -->
 
 </mule>
