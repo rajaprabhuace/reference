@@ -1,8 +1,9 @@
+### Configuration
 git config --global http.sslVerify false
 git config --global user.name "Ramkumaran Tamilarasi"
 git config --global user.email "ramkumaran.tamilarasi@test.com"
 
-Git
+### Git
 linear history
     – fast-forward
     – recursive (3-way)
