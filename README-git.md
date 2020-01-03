@@ -1,9 +1,7 @@
 ### Configuration
-git config --global http.sslVerify false
-git config --global user.name "Ramkumaran Tamilarasi"
+git config --global http.sslVerify false__
+git config --global user.name "Ramkumaran Tamilarasi"__
 git config --global user.email "ramkumaran.tamilarasi@test.com"
-
-
 
 ### Git
 1. linear history
