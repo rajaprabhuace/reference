@@ -32,7 +32,9 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 	
 	============================================================================
 	
+	%output application/json indent=false, skipNullOn="everywhere" encoding="UTF-8"
 	%output application/xml indent=false, skipNullOn="everywhere" encoding="UTF-8"
+	%output application/xml writeDeclaration=false, indent=false, skipNullOn="everywhere" encoding="UTF-8"
 	
 	============================================================================
 
@@ -89,6 +91,10 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 	read('{ "hello" : "world" }','application/json')
 	
 	readUrl("classpath://countries.csv", "application/csv")
+	
+	write(payload, "application/xml", {"indent":false, "skipNullOn" : "everywhere", "encoding" : "UTF-8", "writeDeclaration" : false})
+	
+	write(payload, "application/json", {"indent":false, "skipNullOn" : "everywhere", "encoding" : "UTF-8"})
 	
  -->
 
