@@ -11,4 +11,4 @@ appwiz.cpl
 
 ### PowerShell
 Get-Content sample.log –Wait -Tail 100  
-Get-Content sample.log -wait | where { $_ -match "WARNING" }
+Get-Content sample.log -Wait | where { $_ -match "WARNING" }
