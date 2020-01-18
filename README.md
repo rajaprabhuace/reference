@@ -9,6 +9,6 @@ certmgr.msc
 appwiz.cpl
 
 
-###PowerShell
+### PowerShell
 Get-Content sample.log –Wait -Tail 100 
 Get-Content sample.log -wait | where { $_ -match "WARNING" }
