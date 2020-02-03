@@ -21,6 +21,16 @@ Business Architecture
 Information Systems Architecture
 Technology Architecture
 
+### Architectural Inputs
+* Organizational Model for Enterprise Architecture
+** Scope of organizations impacted
+** Maturity assessment, gaps, and resolution approach
+** Roles and responsibilities for architecture team(s)
+** Constraints on architecture work
+** Re-use requirements
+** Budget requirements
+** Requests for change
+** Governance and support strategy
 
 
 # 6. Phase A: Architecture Vision
@@ -108,7 +118,7 @@ Technology Architecture
 14.3.5 Implement Business and IT Operations  
 14.3.6 Perform Post-Implementation Review and Close the Implementation  
 
-#15. Phase H: Architecture Change Management
+# 15. Phase H: Architecture Change Management
 ## Steps
 15.3.1 Establish Value Realization Process  
 15.3.2 Deploy Monitoring Tools  
