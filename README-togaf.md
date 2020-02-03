@@ -1,3 +1,26 @@
+# Introduction to Part II
+
+## ADM Overview
+
+## Architecture Development Cycle
+### Basic Structure
+The phases of the ADM cycle are further divided into steps; for example, the steps within the architecture development phases (B, C, D) are as follows:
+* Select reference models, viewpoints, and tools
+* Develop Baseline Architecture Description
+* Develop Target Architecture Description
+* Perform gap analysis
+* Define candidate roadmap components
+* Resolve impacts across the Architecture Landscape
+* Conduct formal stakeholder review
+* Finalize the Architecture
+* Create the Architecture Definition Document
+
+#### Phases
+Architecture Vision
+Business Architecture
+Information Systems Architecture
+Technology Architecture
+
 
 # Architecture Principles
 ### Business Principles  
