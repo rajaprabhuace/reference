@@ -16,10 +16,10 @@ The phases of the ADM cycle are further divided into steps; for example, the ste
 * Create the Architecture Definition Document
 
 #### Phases
-Architecture Vision
-Business Architecture
-Information Systems Architecture
-Technology Architecture
+* Architecture Vision
+* Business Architecture
+* Information Systems Architecture
+* Technology Architecture
 
 ### Architectural Inputs
 * Organizational Model for Enterprise Architecture
