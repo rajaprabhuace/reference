@@ -23,15 +23,20 @@ Technology Architecture
 
 ### Architectural Inputs
 * Organizational Model for Enterprise Architecture
-** Scope of organizations impacted
-** Maturity assessment, gaps, and resolution approach
-** Roles and responsibilities for architecture team(s)
-** Constraints on architecture work
-** Re-use requirements
-** Budget requirements
-** Requests for change
-** Governance and support strategy
-
+	* Scope of organizations impacted
+	* Maturity assessment, gaps, and resolution approach
+	* Roles and responsibilities for architecture team(s)
+	* Constraints on architecture work
+	* Re-use requirements
+	* Budget requirements
+	* Requests for change
+	* Governance and support strategy
+* Tailored Architecture Framework (see Part IV, 32.2.21 Tailored Architecture Framework), including:
+	* Tailored architecture method
+	* Tailored architecture content (deliverables and artifacts)
+	* Architecture Principles
+	* Configured and deployed tools
+* Populated Architecture Repository
 
 # 6. Phase A: Architecture Vision
 ## Steps
