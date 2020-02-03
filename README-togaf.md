@@ -31,12 +31,72 @@ Technology Architecture
 	* Budget requirements
 	* Requests for change
 	* Governance and support strategy
-* Tailored Architecture Framework (see Part IV, 32.2.21 Tailored Architecture Framework), including:
+* Tailored Architecture Framework
 	* Tailored architecture method
 	* Tailored architecture content (deliverables and artifacts)
 	* Architecture Principles
 	* Configured and deployed tools
 * Populated Architecture Repository
+* Approved Statement of Architecture Work
+* Architecture Principles
+* Enterprise Continuum
+* Architecture Repository 
+	* Re-usable building blocks
+	* Publicly available reference models
+	* Organization-specific reference models
+	* Organization standards
+* Architecture Vision
+	* Problem description
+	* Objective of the Statement of Architecture Work
+	* Summary views
+	* Business Scenario (optional)
+	* Refined key high-level stakeholder requirements
+* Draft Architecture Definition Document, including (when in scope):
+	* Baseline Business Architecture, Version 0.1
+	* Baseline Technology Architecture, Version 0.1
+	* Baseline Data Architecture, Version 0.1
+	* Baseline Application Architecture, Version 0.1
+	* Target Business Architecture, Version 0.1
+	* Target Technology Architecture, Version 0.1
+	* Target Data Architecture, Version 0.1
+	* Target Application Architecture, Version 0.1
+* Draft Architecture Requirements Specification
+	* Gap analysis results (from Business Architecture)
+	* Relevant technical requirements that will apply to this phase
+	* Architectural requirements
+	* IT Service Management requirements
+* Business Architecture components of an Architecture Roadmap
+* Business and Data Architecture components of an Architecture Roadmap
+* Business, Data, and Application Architecture components of an Architecture Roadmap
+* Change Requests for existing business programs and projects
+* Candidate Architecture Roadmap components from Phases B, C, and D
+* Architecture Roadmap, Version 0.1
+	* Identification of work packages
+	* Identification of Transition Architectures
+	* Implementation Factor Assessment and Deduction Matrix
+* Capability Assessment
+	* Business Capability Assessment
+	* IT Capability Assessment
+* Implementation and Migration Plan, Version 0.1
+* Implementation Governance Model
+* Architecture Contract
+* Request for Architecture Work
+* Implementation and Migration Plan
+* Change Request - technology changes:
+	* New technology reports
+	* Asset management cost reduction initiatives
+	* Technology withdrawal reports
+	* Standards initiatives
+* Change Request - business changes:
+	* Business developments
+	* Business exceptions
+	* Business innovations
+	* Business technology innovations
+	* Strategic change developments
+* Change Request - from lessons learned
+* Implementation Governance Model
+* Architecture Contract
+* Compliance Assessments 
 
 # 6. Phase A: Architecture Vision
 ## Steps
@@ -133,6 +193,18 @@ Technology Architecture
 15.3.6 Manage Governance Process  
 15.3.7 Activate the Process to Implement Change  
 
+# 16. ADM Architecture Requirements Management
+
+### Requirements Development
+* Functional requirements
+* Non-functional requirements
+* Assumptions for requirements
+* Constraints for requirements
+* Domain-specific principles that drive requirements
+* Policies affecting requirements
+* Standards that requirements must meet
+* Organization guidelines for requirements
+* Specifications for requirements
 
 # Architecture Principles
 ### Business Principles  
@@ -145,6 +217,7 @@ Principle 6: Service Orientation
 Principle 7: Compliance with Law  
 Principle 8: IT Responsibility  
 Principle 9: Protection of Intellectual Property  
+
   
 ### Data Principles  
 Principle 10: Data is an Asset  
@@ -161,3 +234,4 @@ Principle 18: Requirements-Based Change
 Principle 19: Responsive Change Management  
 Principle 20: Control Technical Diversity  
 Principle 21: Interoperability  
+
