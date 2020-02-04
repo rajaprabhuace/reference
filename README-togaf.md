@@ -16,15 +16,15 @@ The phases of the ADM cycle are further divided into steps; for example, the ste
 * Create the Architecture Definition Document
 
 #### Phases
-* Phase A: Architecture Vision describes the initial phase of an architecture development cycle
-* Phase B: Business Architecture describes the development of a Business Architecture to support the agreed Architecture Vision
-* Phase C: Information Systems Architectures describes the development of Information Systems Architectures to support the agreed Architecture Vision
-* Phase D: Technology Architecture describes the development of the Technology Architecture to support the agreed Architecture Vision
-* Phase E: Opportunities & Solutions conducts initial implementation planning and the identification of delivery vehicles for the architecture defined in the previous phases
-* Phase F: Migration Planning addresses how to move from the Baseline to the Target Architectures by finalizing a detailed Implementation and Migration Plan
-* Phase G: Implementation Governance provides an architectural oversight of the implementation
-* Phase H: Architecture Change Management establishes procedures for managing change to the new architecture
-* Requirements Management examines the process of managing architecture requirements throughout the ADM
+* Phase A: **Architecture Vision** describes the initial phase of an architecture development cycle
+* Phase B: **Business Architecture** describes the development of a Business Architecture to support the agreed Architecture Vision
+* Phase C: **Information Systems Architectures** describes the development of Information Systems Architectures to support the agreed Architecture Vision
+* Phase D: **Technology Architecture** describes the development of the Technology Architecture to support the agreed Architecture Vision
+* Phase E: **Opportunities & Solutions** conducts initial implementation planning and the identification of delivery vehicles for the architecture defined in the previous phases
+* Phase F: **Migration Planning** addresses how to move from the Baseline to the Target Architectures by finalizing a detailed Implementation and Migration Plan
+* Phase G: **Implementation Governance** provides an architectural oversight of the implementation
+* Phase H: **Architecture Change Management** establishes procedures for managing change to the new architecture
+* **Requirements Management** examines the process of managing architecture requirements throughout the ADM
 
 
 ### Architectural Inputs
