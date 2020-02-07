@@ -32,9 +32,9 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 	
 	============================================================================
 	
-	%output application/json indent=false, skipNullOn="everywhere" encoding="UTF-8"
-	%output application/xml indent=false, skipNullOn="everywhere" encoding="UTF-8"
-	%output application/xml writeDeclaration=false, indent=false, skipNullOn="everywhere" encoding="UTF-8"
+	%output application/json indent=false, skipNullOn="everywhere", encoding="UTF-8"
+	%output application/xml indent=false, skipNullOn="everywhere", encoding="UTF-8"
+	%output application/xml writeDeclaration=false, indent=false, skipNullOn="everywhere", encoding="UTF-8"
 	
 	============================================================================
 
