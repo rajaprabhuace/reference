@@ -1,0 +1,7 @@
+CLS
+
+REM Convert PKCS12 (.p12 or pxf) to JKS (.jks) keystore.
+
+keytool -v -importkeystore -srckeystore localhost.pfx -destkeystore localhost.jks -srcstoretype PKCS12 -deststoretype JKS -srcstorepass changeit -deststorepass changeit
+
+keytool -list -v -keystore localhost.jks -storepass changeit
