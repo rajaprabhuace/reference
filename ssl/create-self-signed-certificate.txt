@@ -1,0 +1,20 @@
+CLS
+
+REM Create Self-Signed Certificate and Trust Store from it.
+
+SET HOST="localhost"
+SET DNAME="CN=localhost, OU=Unit-01, O=Org-01, L=Chennai, C=IN"
+SET KEYSTORE_PASSWORD="changeit"
+SET TRUSTSTORE_PASSWORD="changeit"
+
+keytool -v -genkey -keyalg RSA -keysize 2048 -alias %HOST% -keystore %HOST%.jks -storepass %KEYSTORE_PASSWORD% -keypass %KEYSTORE_PASSWORD% -validity 1825 -dname %DNAME%
+
+keytool -export -alias %HOST% -file %HOST%.crt -keystore %HOST%.jks -storepass %KEYSTORE_PASSWORD% -keypass %KEYSTORE_PASSWORD%
+
+keytool -import -noprompt -trustcacerts -alias %HOST% -file %HOST%.crt -keystore %HOST%-truststore.jks -storepass %TRUSTSTORE_PASSWORD% -keypass %TRUSTSTORE_PASSWORD%
+
+REM Print %HOST%.crt
+keytool -printcert -v -file %HOST%.crt
+
+REM Print %HOST%-truststore.jks
+keytool -list -v -keystore %HOST%-truststore.jks -storepass %TRUSTSTORE_PASSWORD% -keypass %TRUSTSTORE_PASSWORD%
