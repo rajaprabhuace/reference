@@ -17,9 +17,9 @@ git config --global user.email "ramkumaran.tamilarasi@test.com"
     
     
 ### Generate SSH Key Pairs for Git
-1. Generate SSH Key Pair using windows's command ssh-keygen
-ssh-keygen -t rsa -b 2048 -C "ramkumaran.t@gmail.com"
-or 
+1. Generate SSH Key Pair using windows's command ssh-keygen  
+ssh-keygen -t rsa -b 2048 -C "ramkumaran.t@gmail.com"  
+or  
 Generate using puttygen.exe
 
 2. Launch puttygen.exe and import the private key and generate PuTTY Private Key (.ppk) file 
