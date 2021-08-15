@@ -1,6 +1,6 @@
 @startuml
 
-title **Sequence Diagram Template**
+title **Sequence Diagram Reference**
 
 participant participant as Foo
 actor actor1 as Foo1

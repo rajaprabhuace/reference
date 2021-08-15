@@ -1,0 +1,23 @@
+@startuml
+
+title **Gantt Diagram Reference**
+
+saturday are closed and is colored in pink
+sunday are closed and is colored in pink
+2020-07-21 is closed
+2020-07-21 is colored in pink
+
+Project starts 2020-07-01
+[Requirement Analyze] starts 2020-07-01
+[Coding] starts 2020-07-8
+
+[Requirement Analyze] lasts 5 days
+[Coding] lasts 15 days
+[Unit Testing] starts at [Coding]'s end
+[Unit Testing] lasts 2 days
+[Functional Testing] starts at [Coding]'s end
+[Functional Testing] lasts 3 days
+[Regression testing] starts at [Functional Testing]'s end
+[Regression testing] lasts 1 day
+
+@enduml
