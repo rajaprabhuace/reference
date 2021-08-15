@@ -1,0 +1,109 @@
+@startuml
+
+title **Sequence Diagram Template**
+
+participant participant as Foo
+actor actor1 as Foo1
+actor actor2 #red
+boundary boundary as Foo2
+control control as Foo3
+entity entity as Foo4
+database database as Foo5
+collections collections as Foo6
+queue queue as Foo7
+
+Foo -> Foo2 : Hello
+Foo <-- Foo2 : Hello
+Foo -[#red]> Foo1 : <color:red>**Red Arrow**</color>
+
+'Alternative
+alt #lightgreen Success Case
+	Foo -> Foo1 : Hello
+	Foo <-- Foo1 : Response
+else #pink Failure Case
+	Foo -> Foo: Send error response 
+end
+
+'Optional
+opt Optional
+	Foo -> Foo1
+end
+
+'Loop
+loop 1000 times
+	Foo -> Foo1 : DNS Attack
+end
+
+par Scatter Gather
+	Foo -> Foo1 : Parallel message
+	Foo -> Foo2 : Parallel message
+end
+
+break TODO
+	
+end
+
+critical
+	Foo -> Foo1
+	note right: this is another not
+end
+
+group Scatter Gather [Message]
+	autonumber 1
+	Foo -> Foo1 : How are you?
+	note left
+		a note
+		can also be defined
+		on several lines
+	end note
+	Foo -> Foo4 : How are you, buddy?
+	autonumber stop
+end
+
+note over Foo: This is displayed over Foo.
+|||
+note over Foo, Foo1 #FFAAAA: This is displayed over Foo and Foo1.
+||20||
+rnote over Foo, Foo1 #FFAAAA: This is displayed over Foo and Foo1.
+hnote over Foo, Foo1 #FFAAAA: This is displayed over Foo and Foo1. Idle.
+|||
+ref over Foo1
+	This can be on
+	several lines
+end ref
+
+'Delay
+...
+...5 minutes later...
+
+== Lifeline Activation and Destruction ==
+
+participant User
+User -> A: DoWork
+activate A
+A -> B: << createRequest >>
+activate B
+B -> C: DoWork
+activate C
+C --> B: WorkDone
+destroy C
+B --> A: RequestCreated
+deactivate B
+A -> User: Done
+deactivate A
+
+== Create Participant 2 ==
+create Participant2
+Foo -> Participant2
+
+== Create Participant 3 ==
+Foo -> Participant3 **
+
+== box ==
+box "Box1" #lightgray
+	participant Alice
+	participant Bob
+end box
+
+
+@enduml
