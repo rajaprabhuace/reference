@@ -3,8 +3,7 @@ JAVA_REPOS=(\
 	"base64-tool" \
 	"certs-installer" \
 	"common-utils" \
-	"numerology" \
-	"reference"
+	"numerology"
 )
 
 <<comment
